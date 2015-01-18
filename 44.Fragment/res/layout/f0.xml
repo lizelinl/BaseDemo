@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/beginIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="download"
+        android:src="@android:drawable/stat_sys_download_done" />
+
+    <EditText
+        android:id="@+id/pathET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/beginIB"
+        android:inputType="textEmailAddress" >
+        <requestFocus />
+    </EditText>
+
+    <ProgressBar
+        android:id="@+id/downloadPB"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pathET"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/percentTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/downloadPB"
+        android:layout_centerHorizontal="true"
+        android:text="0%" />
+
+</RelativeLayout>

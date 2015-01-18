@@ -1,0 +1,3 @@
+interface Xxx {
+    void ooo();
+}

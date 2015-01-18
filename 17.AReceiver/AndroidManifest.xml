@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itheima.areceiver"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="itheima.permission.BROADCAST" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <receiver android:name="com.itheima.areceiver.A_Receiver" android:permission="itheima.permission.BROADCAST">
+            <intent-filter android:priority="2">
+                <action android:name="itheima.broadcast.NORMAL"/>
+            </intent-filter>
+            <intent-filter android:priority="100">
+                <action android:name="itheima.broadcast.ORDERED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
